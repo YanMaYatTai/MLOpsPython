@@ -19,7 +19,7 @@ steps:
 - task: AzureResourceGroupDeployment@2
   inputs:
     azureSubscription: $(azuresub)
-    action: 'deleteRG'
+    action: 'DeleteRG'
     resourceGroupName: '$(baseName)-AML-RG'
     location: $(location)
   displayName: 'Delete resources in Azure'
