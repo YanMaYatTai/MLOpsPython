@@ -22,7 +22,7 @@ steps:
   
 
 - script: |
-   pytest --junitxml=$(Build.BinariesDirectory)/unittest-results.xml $(Build.SourcesDirectory)/Code/tests/unit/${{parameters.pipelineType}}
+   pytest --junitxml=$(Build.BinariesDirectory)/unittest-results.xml $(Build.SourcesDirectory)/Code/tests/unit
   displayName: 'Run unit tests'
   
 
@@ -45,8 +45,8 @@ steps:
    
   displayName: 'replace subscription value'
 
-- script: 'pytest tests/unit/data_test.py'
-  displayName: 'Data Quality Check'
+#- script: 'pytest tests/unit/data_test.py'
+#  displayName: 'Data Quality Check'
 
 - script: 'python aml_service/00-WorkSpace.py'
   displayName: 'Get or Create Workspace'
