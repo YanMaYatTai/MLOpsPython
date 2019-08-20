@@ -12,8 +12,9 @@
     },
     "location": {
       "type": "string",
-      "defaultValue": "eastus",
+      "defaultValue": "australiaeast",
       "allowedValues": [
+        "australiaeast",
         "eastus",
         "eastus2",
         "southcentralus",
